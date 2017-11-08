@@ -21,8 +21,9 @@ package avinav.practice;
 public class JudgeRouteCircle {
     public static void main(String[] args) {
         String input = "URDL";
-        System.out.println("Input: " + input 
-                + "\nOutput: " + judgeCircle(input) );
+        //System.out.println("Input: " + input 
+         //       + "\nOutput: " + judgeCircle(input) );
+        mymethod();
     }
     
     public static boolean judgeCircle(String moves) {
@@ -52,6 +53,19 @@ public class JudgeRouteCircle {
         if (x==0 && y==0) {
             return true;
         }
+        
         return false;
     }
+    public static void mymethod() {
+        String first = "first";
+        String second = new String("first");
+        "first".concat("second");
+        System.out.println(first.equals(second));
+        System.out.println(first == second);
+        System.out.println(first.equals("firstsecond"));
+        System.out.println(second == "first");
+        
+    }
+    
+    
 }
