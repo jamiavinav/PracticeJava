@@ -2,32 +2,40 @@ package avinav.practice;
 
 public class TreeNode {
 
-    private TreeNode leftChild;
-    private TreeNode rightChild;
-    private TreeNode centerChild;
-    private int data;
-    public TreeNode getLeftChild() {
-        return leftChild;
+    Integer val;
+    TreeNode left;
+    TreeNode right;
+
+    public TreeNode() {
+        
     }
-    public void setLeftChild(TreeNode leftChild) {
-        this.leftChild = leftChild;
+    
+    public TreeNode(Integer data) {
+        this.val = data;
     }
-    public TreeNode getRightChild() {
-        return rightChild;
+    
+    public Integer getData() {
+        return val;
     }
-    public void setRightChild(TreeNode rightChild) {
-        this.rightChild = rightChild;
+
+    public void setData(Integer data) {
+        this.val = data;
     }
-    public TreeNode getCenterChild() {
-        return centerChild;
+
+    public TreeNode getLeft() {
+        return left;
     }
-    public void setCenterChild(TreeNode centerChild) {
-        this.centerChild = centerChild;
+
+    public void setLeft(TreeNode left) {
+        this.left = left;
     }
-    public int getData() {
-        return data;
+
+    public TreeNode getRight() {
+        return right;
     }
-    public void setData(int data) {
-        this.data = data;
+
+    public void setRight(TreeNode right) {
+        this.right = right;
     }
+    
 }

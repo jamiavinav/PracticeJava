@@ -1,3 +1,4 @@
+*.prefs
 .metadata
-bin/
+MyPractice/bin/*
 *.class

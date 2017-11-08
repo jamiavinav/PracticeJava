@@ -2,19 +2,19 @@ package avinav.practice;
 
 public class TrinaryTree {
 
-    private TreeNode rootNode;
+    private TrinaryTreeNode rootNode;
 
-    public TreeNode getRootNode() {
+    public TrinaryTreeNode getRootNode() {
         return rootNode;
     }
 
-    public void setRootNode(TreeNode rootNode) {
+    public void setRootNode(TrinaryTreeNode rootNode) {
         this.rootNode = rootNode;
     }
 
     public void insert(int data) 
     { 
-        TreeNode newNode = new TreeNode(); 
+        TrinaryTreeNode newNode = new TrinaryTreeNode(); 
         newNode.setData(data); 
         // This takes care of the case when there is no root node
         if (rootNode == null) { 
@@ -25,7 +25,7 @@ public class TrinaryTree {
         }
     }
     
-    private void add(TreeNode root, TreeNode newNode) {
+    private void add(TrinaryTreeNode root, TrinaryTreeNode newNode) {
         // Keep going left if the new node is smaller than current node
         if (newNode.getData() < root.getData()) {
             if (root.getLeftChild() == null) {
@@ -58,7 +58,7 @@ public class TrinaryTree {
         delete(null, rootNode, data);
     }
 
-    private void delete(TreeNode parentNode, TreeNode currentNode, int dataToDelete) {
+    private void delete(TrinaryTreeNode parentNode, TrinaryTreeNode currentNode, int dataToDelete) {
         if (dataToDelete < currentNode.getData()) {
             if (currentNode.getLeftChild() != null )
                 // Continue searching on left
@@ -126,8 +126,8 @@ public class TrinaryTree {
             // So find the right most node in the left subtree. And that takes the spot
             // Succession calculation has to start via a traversal.
             // So using a temp node
-            TreeNode temp = currentNode.getLeftChild();
-            TreeNode parentOfTemp = currentNode;
+            TrinaryTreeNode temp = currentNode.getLeftChild();
+            TrinaryTreeNode parentOfTemp = currentNode;
             while (temp.getRightChild() != null) {
                 parentOfTemp = temp;
                 temp = temp.getRightChild();
